@@ -17,6 +17,8 @@ namespace ConnFu
         public delegate void TwitterHandler(object sender, TwitterEventArgs ev);
         public event TwitterHandler Twitter;
 
+        //public const string URI = "https://stream.connfu.com/voice";
+        public const string URI = "http://www.google.com";
         public string Token { get; set; }
 
         public ConnFuClient(string token)
@@ -33,8 +35,8 @@ namespace ConnFu
 
         public void Start()
         {
-            var uri = "http://www.google.com";
-            var request = WebRequest.Create(uri);
+            var request = WebRequest.Create(URI);
+
             var stream = request.GetResponse().GetResponseStream();
 
             var buffer = new byte[1024];
