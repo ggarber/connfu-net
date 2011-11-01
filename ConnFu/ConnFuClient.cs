@@ -24,6 +24,7 @@ namespace ConnFu
         public ConnFuClient(string token)
         {
             Token = token;
+            Start();
         }
 
         private class ReadState
@@ -33,7 +34,7 @@ namespace ConnFu
             public byte[] Buffer { get; set; }
         }
 
-        public void Start()
+        private void Start()
         {
             var request = WebRequest.Create(URI);
 

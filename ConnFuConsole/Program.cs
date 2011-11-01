@@ -16,7 +16,6 @@ namespace ConnFuConsole
                     Console.WriteLine("Look! My dude {0} posted {1} to Twitter", ev.From, ev.Content);
                 };
 
-            connFu.Start();
             Console.ReadLine();
         }
     }
